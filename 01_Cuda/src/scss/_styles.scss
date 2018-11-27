@@ -30,10 +30,10 @@ header {
                     text-decoration: none;
                     padding: 10px 16px;
                     transition: 200ms;
+                    border-radius: 5px;
 
                     &:hover {
                         background-color: $link-hover-background-color;
-                        border-radius: 5px;
                     }
                 }
             }
@@ -252,12 +252,16 @@ main {
 
             .block__description {
                 @include block__description;
-                margin-bottom: 70px;
+                width: 900px;
+                margin: 0 auto 70px auto;
             }
 
             .skills__list {
 
                 .skills__item {
+
+                    margin: 0 60px;
+                    display: inline-block;
 
                     .progress--circle {
                         position: relative;
@@ -321,5 +325,125 @@ main {
         }
     }
 
+
+    .portfolio__block {
+
+        background-color: $portfolio-background-color;
+        color: $portfolio-font-color;
+        font-family: "Titillium Web";
+
+        .portfolio__block__container {
+
+            text-align: center;
+            padding: 110px 0;
+
+            .block__title {
+                @include block__title($portfolio-font-color);
+            }
+
+            .block__decoLine {
+                @include  block__decoLine($portfolio-decoLine-color);
+            }
+
+            .block__description {
+                @include block__description;
+                width: 900px;
+                margin: 0 auto 70px auto;
+            }
+
+            .portfolio__nav {
+
+                padding-bottom: 60px;
+
+                li {
+                    display: inline;
     
+                    a {
+    
+                        color: $portfolio-font-color;
+                        background-color: $portfolio-nav-button-color;
+                        text-decoration: none;
+                        padding: 5px 16px;
+                        margin: 0 4px;
+                        transition: 200ms;
+                        border-radius: 5px;
+                        font-size: 14pt;
+    
+                        &:hover {
+                            background-color: $portfolio-nav-button-color-hover;
+                        }
+                    }
+                }
+            }
+
+            .portfolio__items {
+
+                width: 1125px;
+                margin: 0 auto;
+
+                li {
+
+                    display: inline-block;
+                    margin: 0 10px;
+
+                    img {
+                        margin-bottom: 30px;
+                    }
+
+                    h5 {
+                        font-size: 14pt;
+                        margin-bottom: 60px;
+                    }
+                }
+            }
+
+            .portfolio__button {
+                @include pressButton($portfolio-button-background-color, $portfolio-button-after-color);
+                color: $white;
+                font-size: 14pt;
+            }
+        }
+    }
+    
+    .reviews__block {
+        
+        .reviews__block__container {
+
+            .block__title {
+
+            }
+
+            .block__decoLine {
+
+            }
+
+            .block__description {
+
+            }
+
+            .reviews__items {
+
+                li {
+
+                    .reviews__avatar {
+                        float: left;
+                    }
+
+                    .reviews__article {
+
+                    }
+
+                    .reviews__name {
+
+                    }
+
+                    .reviews__position {
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
 }
