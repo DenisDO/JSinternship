@@ -1,6 +1,40 @@
-// @mixin li-style ($li-item-color) {
-//     text-decoration: none;
-//     color: $li-item-color;
-//     font-family: 'Garamond', arial;
-//     font-size: 12pt;
-// }
+@mixin pressButton($mainColor, $shadowColor) {
+    font-weight: 600;
+    margin: 0 auto;
+    width: 290px;
+    height: 65px;
+    position: relative;
+    background-color: $mainColor;
+    transition: 300ms;
+    border-radius: 5px;
+    padding: 23px 0;
+    bottom: 0;
+    box-sizing: border-box;
+    box-shadow: 0 5px 0 0 $shadowColor;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: none;
+        bottom: -5px;
+    }
+}
+
+@mixin block__title($color) {
+    font-family: "Titillium Web";
+    font-weight: bold;
+    font-size: 40pt;
+    color: $color;
+    line-height: 1;
+}
+
+@mixin block__decoLine($color) {
+    width: 85px;
+    height: 4px;
+    margin: 20px auto;
+    background-color: $color;
+}
+
+@mixin block__description {
+    font-size: 18pt;
+    line-height: 1;
+}

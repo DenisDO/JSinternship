@@ -62,25 +62,176 @@ header {
             }
 
             .header__button {
-                font-weight: 600;
-                margin: 0 auto;
-                width: 290px;
-                height: 65px;
-                position: relative;
-                background-color: $button-background-color;
-                transition: 300ms;
-                border-radius: 5px;
-                padding: 23px 0;
-                bottom: 0;
-                box-sizing: border-box;
-                box-shadow: 0 5px 0 0 $button-after-color;
-                cursor: pointer;
+                @include pressButton($head-button-background-color, $head-button-after-color);
+            }
+        }
+    }
+}
 
-                &:hover {
-                    box-shadow: none;
-                    bottom: -5px;
+main {
+    .service__block {
+
+        background-color: $services-background-color;
+        color: $services-fonts-color;
+        font-family: "Titillium Web";
+
+        .service__block__container {
+
+            text-align: center;
+            padding: 110px 0;
+
+            .block__title {
+                @include block__title($white);
+            }
+
+            .block__decoLine {
+                @include  block__decoLine($services-decoLine-color);
+            }
+
+            .block__description {
+                @include block__description;
+                margin-bottom: 70px;
+            }
+
+            .service__features {
+
+                .service__features__item {
+
+                    display: inline-block;
+                    margin: 0 80px;
+
+                    img {
+                        height: 130px;
+                    }
+
+                    h4 {
+                        font-size: 17pt;
+                        font-weight: bold;
+                        margin: 35px 0 20px 0;
+                    }
+
+                    p {
+                        width: 170px;
+                        font-size: 14pt;
+                    }
                 }
             }
         }
     }
+
+
+    .team__block {
+
+        background-color: $team-background-color;
+        color: $team-font-color;
+        font-family: "Titillium Web";
+
+        .team__block__container {
+            
+            text-align: center;
+            padding: 110px 0;
+
+            .block__title {
+                @include block__title($team-font-color);
+            }
+
+            .block__decoLine {
+                @include  block__decoLine($team-decoLine-color);
+            }
+
+            .block__description {
+                @include block__description;
+                margin-bottom: 70px;
+            }
+
+            .team__list {
+
+                .team__item {
+
+                    display: inline-block;
+                    margin: 0 35px;
+
+                    .team__avatar {
+                        margin: 0 auto;
+                        height: 200px;
+                        width: 200px;
+                        border-radius: 50%;
+                        background-color: $team-decoLine-color;
+                        margin-bottom: 40px;
+                    }
+
+                    .team__name {
+                        font-size: 18pt;
+                        font-weight: bold;
+                        display: inline-block;
+                        margin-bottom: 15px;
+                    }
+
+                    .team__position {
+                        font-size: 13pt;
+                        color: $team-position-color;
+                        display: inline-block;
+                        margin-bottom: 30px;
+                    }
+
+                    .team__description {
+                        width: 250px;
+                        font-size: 12pt;
+                        margin-bottom: 30px;
+                    }
+
+                    .team__socials {
+
+                        width: 100%;
+                        // margin: 0 auto;
+                        height: 32px;
+
+                        .social-sprite {
+
+                            float: left;
+                            background-image: url(../img/spriteSocial.png);
+                            background-repeat: no-repeat;
+                            display: block;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            margin: 0 auto;
+                        
+                            &-Fb-icon {
+                                width: 32px;
+                                height: 32px;
+                                background-position: -5px -5px;
+                            }
+                        
+                            &-Twitter-icon {
+                                width: 32px;
+                                height: 32px;
+                                background-position: -47px -47px;
+                            }
+                        
+                            &-LinkedIn-icon {
+                                width: 32px;
+                                height: 32px;
+                                background-position: -47px -5px;
+                            }
+                        
+                            &-Mail-icon {
+                                width: 32px;
+                                height: 32px;
+                                background-position: -5px -47px;
+                            }
+
+                            &:hover {
+                                box-shadow: 0 0 10px 0 $chambray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+    
 }

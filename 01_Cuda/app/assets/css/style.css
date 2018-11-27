@@ -415,3 +415,114 @@ header {
         header article .article__container .header__button:hover {
           box-shadow: none;
           bottom: -5px; }
+
+main .service__block {
+  background-color: #17c2a4;
+  color: #ffffff;
+  font-family: "Titillium Web"; }
+  main .service__block .service__block__container {
+    text-align: center;
+    padding: 110px 0; }
+    main .service__block .service__block__container .block__title {
+      font-family: "Titillium Web";
+      font-weight: bold;
+      font-size: 40pt;
+      color: #ffffff;
+      line-height: 1; }
+    main .service__block .service__block__container .block__decoLine {
+      width: 85px;
+      height: 4px;
+      margin: 20px auto;
+      background-color: #14a58c; }
+    main .service__block .service__block__container .block__description {
+      font-size: 18pt;
+      line-height: 1;
+      margin-bottom: 70px; }
+    main .service__block .service__block__container .service__features .service__features__item {
+      display: inline-block;
+      margin: 0 80px; }
+      main .service__block .service__block__container .service__features .service__features__item img {
+        height: 130px; }
+      main .service__block .service__block__container .service__features .service__features__item h4 {
+        font-size: 17pt;
+        font-weight: bold;
+        margin: 35px 0 20px 0; }
+      main .service__block .service__block__container .service__features .service__features__item p {
+        width: 170px;
+        font-size: 14pt; }
+
+main .team__block {
+  background-color: #e7f1f8;
+  color: #3c4761;
+  font-family: "Titillium Web"; }
+  main .team__block .team__block__container {
+    text-align: center;
+    padding: 110px 0; }
+    main .team__block .team__block__container .block__title {
+      font-family: "Titillium Web";
+      font-weight: bold;
+      font-size: 40pt;
+      color: #3c4761;
+      line-height: 1; }
+    main .team__block .team__block__container .block__decoLine {
+      width: 85px;
+      height: 4px;
+      margin: 20px auto;
+      background-color: #c8d9e5; }
+    main .team__block .team__block__container .block__description {
+      font-size: 18pt;
+      line-height: 1;
+      margin-bottom: 70px; }
+    main .team__block .team__block__container .team__list .team__item {
+      display: inline-block;
+      margin: 0 35px; }
+      main .team__block .team__block__container .team__list .team__item .team__avatar {
+        margin: 0 auto;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-color: #c8d9e5;
+        margin-bottom: 40px; }
+      main .team__block .team__block__container .team__list .team__item .team__name {
+        font-size: 18pt;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 15px; }
+      main .team__block .team__block__container .team__list .team__item .team__position {
+        font-size: 13pt;
+        color: #30bae7;
+        display: inline-block;
+        margin-bottom: 30px; }
+      main .team__block .team__block__container .team__list .team__item .team__description {
+        width: 250px;
+        font-size: 12pt;
+        margin-bottom: 30px; }
+      main .team__block .team__block__container .team__list .team__item .team__socials {
+        width: 100%;
+        height: 32px; }
+        main .team__block .team__block__container .team__list .team__item .team__socials .social-sprite {
+          float: left;
+          background-image: url(../img/spriteSocial.png);
+          background-repeat: no-repeat;
+          display: block;
+          border-radius: 50%;
+          cursor: pointer;
+          margin: 0 auto; }
+          main .team__block .team__block__container .team__list .team__item .team__socials .social-sprite-Fb-icon {
+            width: 32px;
+            height: 32px;
+            background-position: -5px -5px; }
+          main .team__block .team__block__container .team__list .team__item .team__socials .social-sprite-Twitter-icon {
+            width: 32px;
+            height: 32px;
+            background-position: -47px -47px; }
+          main .team__block .team__block__container .team__list .team__item .team__socials .social-sprite-LinkedIn-icon {
+            width: 32px;
+            height: 32px;
+            background-position: -47px -5px; }
+          main .team__block .team__block__container .team__list .team__item .team__socials .social-sprite-Mail-icon {
+            width: 32px;
+            height: 32px;
+            background-position: -5px -47px; }
+          main .team__block .team__block__container .team__list .team__item .team__socials .social-sprite:hover {
+            box-shadow: 0 0 10px 0 #344b8e; }
