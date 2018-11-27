@@ -1,5 +1,4 @@
 //HEADER
-
 $header-background-color: $affairLight;
 $header-font-color: $white;
 $link-hover-background-color: $affair;
@@ -8,15 +7,26 @@ $head-button-after-color: $copper;
 
 
 //SERVICES BLOCK
-
 $services-background-color: $mountainMeadowLight;
 $services-fonts-color: $white;
 $services-decoLine-color: $mountainMeadow;
 
-//TEAM
 
+//TEAM
 $team-background-color: $linkWater;
 $team-font-color: $fiord;
 $team-decoLine-color: $botticelli;
 $team-position-color: $pictonBlue;
 $team-social-hover-color: $chambray;
+
+
+//SKILLS
+$skills-background-color: $white;
+$skills-font-color: $fiord;
+$skills-decoLine-color: $mystic;
+//progressbar
+$progress--90: $pictonBlue;
+$progress--75: $cabaret;
+$progress--70: $java;
+$progress--85: $burntSienna;
+// $progress__back: $mystic;
