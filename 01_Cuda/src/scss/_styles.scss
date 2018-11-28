@@ -11,12 +11,14 @@ header {
         position: relative;
 
         .header__logo {
+            transition: 600ms;
             position: absolute;
             bottom: 0px;
             left: 200px;
         }
 
         .header__nav {
+            transition: 600ms;
             position: absolute;
             bottom: 0px;
             right: 200px;
@@ -59,6 +61,7 @@ header {
                 font-weight: bold;
                 line-height: 1;
                 margin-bottom: 60px;
+                transition: 600ms;
             }
 
             .header__button {
@@ -96,7 +99,7 @@ main {
             .service__features {
 
                 .service__features__item {
-
+                    transition: 600ms;
                     display: inline-block;
                     margin: 0 80px;
 
@@ -147,7 +150,7 @@ main {
             .team__list {
 
                 .team__item {
-
+                    transition: 600ms;
                     display: inline-block;
                     margin: 0 35px;
 
@@ -183,13 +186,14 @@ main {
                     .team__socials {
 
                         width: 100%;
-                        // margin: 0 auto;
+                        box-sizing: border-box;
+                        padding: 0 60px;
                         height: 32px;
 
                         .social-sprite {
 
                             float: left;
-                            background-image: url(../img/spriteSocial.png);
+                            background-image: url(../Images/spriteSocial.png);
                             background-repeat: no-repeat;
                             display: block;
                             border-radius: 50%;
@@ -252,16 +256,24 @@ main {
 
             .block__description {
                 @include block__description;
-                width: 900px;
+                // width: 900px;
                 margin: 0 auto 70px auto;
             }
 
             .skills__list {
 
                 .skills__item {
-
+                    transition: 600ms;
                     margin: 0 60px;
                     display: inline-block;
+                    display: inline-block;
+
+                    span {
+                        font-size: 18pt;
+                        font-weight: bold;
+                        display: block;
+                        margin-bottom: 15px;
+                    }
 
                     .progress--circle {
                         position: relative;
@@ -347,7 +359,7 @@ main {
 
             .block__description {
                 @include block__description;
-                width: 900px;
+                // width: 900px;
                 margin: 0 auto 70px auto;
             }
 
@@ -377,7 +389,7 @@ main {
             }
 
             .portfolio__items {
-
+                transition: 600ms;
                 width: 1125px;
                 margin: 0 auto;
 
@@ -387,6 +399,7 @@ main {
                     margin: 0 10px;
 
                     img {
+                        transition: 600ms;
                         margin-bottom: 30px;
                     }
 
@@ -407,43 +420,313 @@ main {
     
     .reviews__block {
         
+        background-color: $reviews-background-color;
+        color: $reviews-font-color;
+        font-family: "Titillium Web";
+
         .reviews__block__container {
 
-            .block__title {
+            text-align: center;
+            padding: 110px 0 0 0;
 
+            .block__title {
+                @include block__title($reviews-font-color);
             }
 
             .block__decoLine {
-
+                @include  block__decoLine($reviews-decoLine-color);
             }
 
             .block__description {
-
+                @include block__description;
+                // width: 900px;
+                margin: 0 auto 70px auto;
             }
 
             .reviews__items {
 
                 li {
 
+                    display: inline-block;
+                    margin: 0 70px 150px 70px;
+                    // width: 430px;
+
                     .reviews__avatar {
                         float: left;
+                        margin-right: 50px;
+                        height: 100px;
+                        width: 100px;
+                        border-radius: 50%;
+                        background-color: #787878;
                     }
 
-                    .reviews__article {
+                    div {
 
-                    }
+                        text-align: left;
 
-                    .reviews__name {
+                        .reviews__article {
+                            font-style: italic;
+                            font-size: 12pt;
+                            width: 290px;
+                            display: inline-block;
+                            margin-bottom: 30px;
+                        }
 
-                    }
+                        .reviews__name {
+                            font-weight: bold;
+                            font-size: 14pt;
+                            display: inline-block;
+                        }
 
-                    .reviews__position {
-                        
+                        .reviews__position {
+                            color: $reviews-position-color;
+                            font-size: 12pt;
+                            display: inline-block;
+                        }
                     }
                 }
             }
         }
     }
 
+    .feedback__block {
 
+        background-color: $feedback-background-color;
+        color: $feedback-font-color;
+        font-family: "Titillium Web";
+
+        .feedback__block__container {
+
+            text-align: center;
+            padding: 110px 0 110px 0;
+
+            .block__title {
+                @include block__title($feedback-font-color);
+            }
+
+            .block__decoLine {
+                @include  block__decoLine($feedback-decoLine-color);
+            }
+
+            .block__description {
+                @include block__description;
+                margin: 0 auto 70px auto;
+            }
+
+            form {
+
+                margin: 0 auto;
+                width: 863px;
+    
+                input {
+                    outline: none;
+                    background-color: $feedback-form-background-color;
+                    border: none;
+                    border-radius: 5px;
+                    width: 380px;
+                    height: 55px;
+                    margin: 0 15px 25px 15px;
+                    padding-left: 20px;
+                    &::placeholder {
+                        color: $white;
+                        font-size: 14pt;
+                    }
+                }
+    
+                textarea {
+                    width: 807px;
+                    height: 180px;
+                    outline: none;
+                    background-color: $feedback-form-background-color;
+                    border: none;
+                    border-radius: 5px;
+                    margin: 0 15px;
+                    color: $white;
+                    font-size: 14pt;
+                    padding: 20px 0 0 20px;
+                    margin-bottom: 50px;
+                }
+    
+                .feedback__button {
+                    text-align: center;
+                    font-size: 14pt;
+                    @include pressButton($feedback-button-background-color, $feedback-button-after-color);
+                }
+            }
+        }
+        
+    }
+
+}
+
+footer {
+    height: 110px;
+    border-top: 1px solid $feedback-border-top-color;
+    background-color: $feedback-background-color;
+    text-align: center;
+
+    ul {
+        li {
+            display: inline-block;
+
+            a {
+                font-size: 14pt;
+                color: $feedback-link-color;
+                text-decoration: none;
+                margin: 0 55px;
+                line-height: 110px;
+
+                &:hover {
+                    color: $feedback-link-actice-color;
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 1360px) and (min-width: 992px) {
+    header {    
+        nav {    
+            .header__logo {
+                left: 70px;
+            }
+    
+            .header__nav {
+                right: 70px;
+            }
+        }
+    }    
+
+    main {
+        .service__block {
+            .service__block__container {
+                .service__features {
+                    .service__features__item {
+                        margin: 50px 140px;
+                    }
+                }
+            }
+        }
+
+        .team__block {    
+            .team__block__container {    
+                .team__list {    
+                    .team__item {
+                        margin: 0 110px;
+                    }
+                }
+            }
+        }
+
+        .skills__block {    
+            .skills__block__container {
+                .skills__list {
+                    .skills__item {
+                        margin: 50px 130px;
+                    }
+                }
+            }
+        }
+
+        .portfolio__block {    
+            .portfolio__block__container {
+                .portfolio__items {    
+                    width: 100%;
+                    li {
+                        img {
+                            width: 500px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {    
+        ul {
+            li {    
+                a {
+                    margin: 0 30px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 992px) {
+    header {    
+        nav {
+            position: static;
+            .header__logo {
+                display: block;
+                position: static;
+                margin: 0 auto;
+                padding: 27px;
+            }
+    
+            .header__nav {
+                display: none;
+            }
+        }
+
+        article {
+            .article__container {    
+                h3 {
+                    font-size: 30pt;
+                }
+            }
+        }
+    } 
+
+    main {
+        .service__block {
+            .service__block__container {
+                .service__features {
+                    .service__features__item {
+                        margin: 50px 80px;
+                    }
+                }
+            }
+        }
+
+        .portfolio__block {    
+            .portfolio__block__container {
+                .portfolio__items {    
+                    width: 100%;
+                    li {
+                        img {
+                            width: 400px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .feedback__block {    
+            .feedback__block__container {    
+                form {        
+                    width: 100%;
+                    padding: 50px;
+                    box-sizing: border-box;
+                    input {
+                        width: 100%;
+                        margin: 0 auto 25px auto;
+                    }
+        
+                    textarea {
+                        width: 100%;
+                        margin: 0 auto 50px auto;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    footer {    
+        display: none;
+    }
 }
