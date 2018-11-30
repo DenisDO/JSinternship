@@ -1,3 +1,163 @@
 .header {
 
+    margin-bottom: 40px;
+    margin: 0 auto 40px auto;
+    width: 979px;
+
+    .header__nav {
+
+        height: 123px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+
+        }
+
+        nav {
+
+            ul {
+
+                display: flex;
+                justify-content: space-around;
+
+                li {
+
+                    position: relative;
+                    
+                    a {
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: $header-link-color;
+                        margin: 0 14px;
+                        text-decoration: none;
+                        letter-spacing: -0.51px;
+
+                        &:hover {
+                            color: $header-link-hover-color;
+                        }
+                    }
+
+                    .header__link--active {
+                        color: $header-link-hover-color;
+                    }
+
+                    .nav--second {
+
+                        position: absolute;
+                        top: 20px;
+                        right: -55px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+
+                        &::before {
+                            color: $header-link-second-background;
+                            font-size: 25pt;
+                            content: "🢑";
+                            display: block;
+                            position: absolute;
+                            top: -32px;
+                            left: 68px;
+                        }
+
+                        &::after {
+                            color: $header-link-second-background;
+                            font-size: 25pt;
+                            content: "🢒";
+                            display: block;
+                            position: absolute;
+                            top: -5px;
+                            right: 8px;
+                        }
+
+                        li {
+
+                            display: block;
+                            position: relative;
+
+                            a {
+
+                                color: $header-link-second-color;
+                                background-color: $header-link-second-background;
+                                font-size: 12px;
+                                padding: 9px 0;
+                                width: 140px;
+                                display: block;
+                                border-bottom: 1px solid $mineShaft;
+                                padding-left: 12px;
+                                box-sizing: border-box;
+
+                                &:last-child {
+                                    border-bottom: none;
+                                }
+
+                                &:hover {
+                                    color: $header-link-hover-second-color;
+                                }
+                            }
+
+                            .header__link--second--active {
+                                color: $header-link-hover-second-color;
+                            }
+
+                            ul {
+
+                                position: absolute;
+                                left: 143px;
+                                top: 0;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                
+                                li {
+
+                                    a {
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header__banner {
+
+        background-color: $header-banner-background;
+        border-top: 7px solid $header-banner-line-color;
+        display: flex;
+        align-items: flex-start;
+        height: 128px;
+
+        img {
+
+        }
+
+        article {
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 18px;
+            box-sizing: border-box;
+
+            h3 {
+                font-size: 17pt;
+                color: $header-banner-title-color;
+                margin-right: 80px;
+            }
+    
+            p {
+                color: $header-banner-article-color;
+                line-height: 1.5;
+            }
+        }
+    }
 }
