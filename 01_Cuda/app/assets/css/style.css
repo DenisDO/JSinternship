@@ -359,65 +359,70 @@ header {
   background-color: #87509c;
   color: #ffffff;
   font-family: "Titillium Web";
-  font-size: 16pt; }
+  font-size: 12pt; }
   header nav {
-    height: 92px;
+    height: 97px;
     position: relative; }
     header nav .header__logo {
       transition: 600ms;
       position: absolute;
       bottom: 0px;
-      left: 200px; }
+      left: 212px; }
     header nav .header__nav {
       transition: 600ms;
       position: absolute;
-      bottom: 0px;
-      right: 200px; }
+      bottom: 7px;
+      right: 164px; }
       header nav .header__nav li {
         display: inline; }
         header nav .header__nav li a {
           color: #ffffff;
           text-decoration: none;
-          padding: 10px 16px;
+          padding: 10px 20px;
           transition: 200ms;
           border-radius: 5px; }
           header nav .header__nav li a:hover {
             background-color: #643a79; }
-  header article {
-    height: 504px;
+
+main .article__block {
+  background-color: #87509c;
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-size: 16pt;
+  height: 504px;
+  width: 100%;
+  position: relative; }
+  main .article__block .article__container {
     width: 100%;
-    position: relative; }
-    header article .article__container {
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-      text-align: center; }
-      header article .article__container h3 {
-        font-family: "Titillium Web";
-        font-size: 43pt;
-        font-weight: bold;
-        line-height: 1;
-        margin-bottom: 60px;
-        transition: 600ms; }
-      header article .article__container .header__button {
-        font-weight: 600;
-        margin: 0 auto;
-        width: 290px;
-        height: 65px;
-        position: relative;
-        background-color: #eb7d4b;
-        transition: 300ms;
-        border-radius: 5px;
-        padding: 23px 0;
-        bottom: 0;
-        box-sizing: border-box;
-        box-shadow: 0 5px 0 0 #c86a40;
-        cursor: pointer; }
-        header article .article__container .header__button:hover {
-          box-shadow: none;
-          bottom: -5px; }
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    text-align: center; }
+    main .article__block .article__container h3 {
+      font-family: "Titillium Web";
+      font-size: 33pt;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 60px;
+      transition: 600ms; }
+    main .article__block .article__container .header__button {
+      font-weight: 600;
+      margin: 0 auto;
+      width: 290px;
+      height: 65px;
+      position: relative;
+      background-color: #eb7d4b;
+      transition: 300ms;
+      border-radius: 5px;
+      padding: 23px 0;
+      bottom: 0;
+      box-sizing: border-box;
+      box-shadow: 0 5px 0 0 #c86a40;
+      cursor: pointer; }
+      main .article__block .article__container .header__button:hover {
+        box-shadow: none;
+        bottom: -5px; }
 
 main .service__block {
   background-color: #17c2a4;
@@ -425,11 +430,11 @@ main .service__block {
   font-family: "Titillium Web"; }
   main .service__block .service__block__container {
     text-align: center;
-    padding: 110px 0; }
+    padding: 113px 0; }
     main .service__block .service__block__container .block__title {
       font-family: "Titillium Web";
       font-weight: bold;
-      font-size: 40pt;
+      font-size: 27pt;
       color: #ffffff;
       line-height: 1; }
     main .service__block .service__block__container .block__decoLine {
@@ -438,20 +443,21 @@ main .service__block {
       margin: 20px auto;
       background-color: #14a58c; }
     main .service__block .service__block__container .block__description {
-      font-size: 18pt;
+      font-size: 15pt;
       line-height: 1;
       width: 100%;
       margin-bottom: 70px; }
     main .service__block .service__block__container .service__features .service__features__item {
       transition: 600ms;
       display: inline-block;
-      margin: 0 80px; }
+      margin: 0 55px; }
       main .service__block .service__block__container .service__features .service__features__item img {
-        height: 130px; }
+        height: 130px;
+        margin-bottom: 70px; }
       main .service__block .service__block__container .service__features .service__features__item h4 {
         font-size: 17pt;
         font-weight: bold;
-        margin: 35px 0 20px 0; }
+        margin: 0 0 31px 0; }
       main .service__block .service__block__container .service__features .service__features__item p {
         width: 170px;
         font-size: 14pt; }
@@ -462,11 +468,11 @@ main .team__block {
   font-family: "Titillium Web"; }
   main .team__block .team__block__container {
     text-align: center;
-    padding: 110px 0; }
+    padding: 113px 0; }
     main .team__block .team__block__container .block__title {
       font-family: "Titillium Web";
       font-weight: bold;
-      font-size: 40pt;
+      font-size: 27pt;
       color: #3c4761;
       line-height: 1; }
     main .team__block .team__block__container .block__decoLine {
@@ -475,14 +481,14 @@ main .team__block {
       margin: 20px auto;
       background-color: #c8d9e5; }
     main .team__block .team__block__container .block__description {
-      font-size: 18pt;
+      font-size: 15pt;
       line-height: 1;
       width: 100%;
       margin-bottom: 70px; }
     main .team__block .team__block__container .team__list .team__item {
       transition: 600ms;
       display: inline-block;
-      margin: 0 35px; }
+      margin: 0 17px; }
       main .team__block .team__block__container .team__list .team__item .team__avatar {
         margin: 0 auto;
         height: 200px;
@@ -542,11 +548,11 @@ main .skills__block {
   font-family: "Titillium Web"; }
   main .skills__block .skills__block__container {
     text-align: center;
-    padding: 110px 0; }
+    padding: 113px 0; }
     main .skills__block .skills__block__container .block__title {
       font-family: "Titillium Web";
       font-weight: bold;
-      font-size: 40pt;
+      font-size: 27pt;
       color: #3c4761;
       line-height: 1; }
     main .skills__block .skills__block__container .block__decoLine {
@@ -555,13 +561,13 @@ main .skills__block {
       margin: 20px auto;
       background-color: #dfe8ed; }
     main .skills__block .skills__block__container .block__description {
-      font-size: 18pt;
+      font-size: 15pt;
       line-height: 1;
       width: 100%;
       margin: 0 auto 70px auto; }
     main .skills__block .skills__block__container .skills__list .skills__item {
       transition: 600ms;
-      margin: 0 60px;
+      margin: 0 40px;
       display: inline-block;
       display: inline-block; }
       main .skills__block .skills__block__container .skills__list .skills__item span {
@@ -693,11 +699,11 @@ main .portfolio__block {
   font-family: "Titillium Web"; }
   main .portfolio__block .portfolio__block__container {
     text-align: center;
-    padding: 110px 0; }
+    padding: 113px 0; }
     main .portfolio__block .portfolio__block__container .block__title {
       font-family: "Titillium Web";
       font-weight: bold;
-      font-size: 40pt;
+      font-size: 27pt;
       color: #393939;
       line-height: 1; }
     main .portfolio__block .portfolio__block__container .block__decoLine {
@@ -706,7 +712,7 @@ main .portfolio__block {
       margin: 20px auto;
       background-color: #ebc985; }
     main .portfolio__block .portfolio__block__container .block__description {
-      font-size: 18pt;
+      font-size: 15pt;
       line-height: 1;
       width: 100%;
       margin: 0 auto 70px auto; }
@@ -718,7 +724,7 @@ main .portfolio__block {
           color: #393939;
           background-color: #ebc985;
           text-decoration: none;
-          padding: 5px 16px;
+          padding: 7px 23px;
           margin: 0 4px;
           transition: 200ms;
           border-radius: 5px;
@@ -731,7 +737,7 @@ main .portfolio__block {
       margin: 0 auto; }
       main .portfolio__block .portfolio__block__container .portfolio__items li {
         display: inline-block;
-        margin: 0 10px; }
+        margin: 0 10px 16px 10px; }
         main .portfolio__block .portfolio__block__container .portfolio__items li img {
           transition: 600ms;
           margin-bottom: 30px; }
@@ -764,11 +770,11 @@ main .reviews__block {
   font-family: "Titillium Web"; }
   main .reviews__block .reviews__block__container {
     text-align: center;
-    padding: 110px 0 0 0; }
+    padding: 113px 0 0 0; }
     main .reviews__block .reviews__block__container .block__title {
       font-family: "Titillium Web";
       font-weight: bold;
-      font-size: 40pt;
+      font-size: 27pt;
       color: #ffffff;
       line-height: 1; }
     main .reviews__block .reviews__block__container .block__decoLine {
@@ -777,13 +783,13 @@ main .reviews__block {
       margin: 20px auto;
       background-color: #b73c6d; }
     main .reviews__block .reviews__block__container .block__description {
-      font-size: 18pt;
+      font-size: 15pt;
       line-height: 1;
       width: 100%;
       margin: 0 auto 70px auto; }
     main .reviews__block .reviews__block__container .reviews__items li {
       display: inline-block;
-      margin: 0 70px 150px 70px; }
+      margin: 0 20px 200px 45px; }
       main .reviews__block .reviews__block__container .reviews__items li .reviews__avatar {
         float: left;
         margin-right: 50px;
@@ -814,11 +820,11 @@ main .feedback__block {
   font-family: "Titillium Web"; }
   main .feedback__block .feedback__block__container {
     text-align: center;
-    padding: 110px 0 110px 0; }
+    padding: 113px 0 113px 0; }
     main .feedback__block .feedback__block__container .block__title {
       font-family: "Titillium Web";
       font-weight: bold;
-      font-size: 40pt;
+      font-size: 27pt;
       color: #ffffff;
       line-height: 1; }
     main .feedback__block .feedback__block__container .block__decoLine {
@@ -827,7 +833,7 @@ main .feedback__block {
       margin: 20px auto;
       background-color: #344b8e; }
     main .feedback__block .feedback__block__container .block__description {
-      font-size: 18pt;
+      font-size: 15pt;
       line-height: 1;
       width: 100%;
       margin: 0 auto 70px auto; }
@@ -860,7 +866,7 @@ main .feedback__block {
         color: #ffffff;
         font-size: 14pt;
         padding: 20px 0 0 20px;
-        margin-bottom: 50px; }
+        margin-bottom: 65px; }
       main .feedback__block .feedback__block__container form .feedback__button {
         text-align: center;
         font-size: 14pt;
@@ -882,18 +888,18 @@ main .feedback__block {
           bottom: -5px; }
 
 footer {
-  height: 110px;
+  height: 113px;
   border-top: 1px solid #3c5499;
   background-color: #344b8e;
   text-align: center; }
   footer ul li {
     display: inline-block; }
     footer ul li a {
-      font-size: 14pt;
+      font-size: 19pt;
       color: #ffffff;
       text-decoration: none;
-      margin: 0 55px;
-      line-height: 110px; }
+      margin: 0 25px;
+      line-height: 113px; }
       footer ul li a:hover {
         color: #30bae7; }
 
@@ -905,7 +911,7 @@ footer {
   main .service__block .service__block__container .service__features .service__features__item {
     margin: 50px 140px; }
   main .team__block .team__block__container .team__list .team__item {
-    margin: 0 110px; }
+    margin: 0 113px; }
   main .skills__block .skills__block__container .skills__list .skills__item {
     margin: 50px 130px; }
   main .portfolio__block .portfolio__block__container .portfolio__items {

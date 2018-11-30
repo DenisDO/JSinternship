@@ -22,7 +22,7 @@
 @mixin block__title($color) {
     font-family: "Titillium Web";
     font-weight: bold;
-    font-size: 40pt;
+    font-size: 27pt;
     color: $color;
     line-height: 1;
 }
@@ -35,7 +35,7 @@
 }
 
 @mixin block__description {
-    font-size: 18pt;
+    font-size: 15pt;
     line-height: 1;
     width: 100%;
 }
