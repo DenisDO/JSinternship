@@ -1,8 +1,11 @@
 @mixin pressButton($mainColor, $shadowColor) {
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.19px;
+    letter-spacing: 0.27px;
     margin: 0 auto;
-    width: 290px;
-    height: 65px;
+    width: 293px;
+    height: 66px;
     position: relative;
     background-color: $mainColor;
     transition: 300ms;
@@ -10,32 +13,89 @@
     padding: 23px 0;
     bottom: 0;
     box-sizing: border-box;
-    box-shadow: 0 5px 0 0 $shadowColor;
+    box-shadow: 0 4px 0 0 $shadowColor;
     cursor: pointer;
 
     &:hover {
         box-shadow: none;
-        bottom: -5px;
+        bottom: -4px;
     }
 }
 
 @mixin block__title($color) {
-    font-family: "Titillium Web";
-    font-weight: bold;
-    font-size: 27pt;
     color: $color;
-    line-height: 1;
+    font-family: "Titillium Web";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 29.91px;
+    letter-spacing: 4px;
 }
 
 @mixin block__decoLine($color) {
-    width: 85px;
+    width: 87px;
     height: 4px;
-    margin: 20px auto;
+    margin: 21px auto;
     background-color: $color;
 }
 
-@mixin block__description {
-    font-size: 15pt;
-    line-height: 1;
-    width: 100%;
+@mixin block__description($color) {
+    font-family: "Titillium Web";
+    font-size: 18px;
+    font-weight: 400;
+    color: $color;
+    line-height: 26px;
+    letter-spacing: 0.36px;
+    margin-bottom: 82px;
+}
+
+@mixin item__title($color) {
+    font-family: "Titillium Web";
+    color: $color;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.48px;
+}
+
+@mixin size($width, $height) {
+    height: $height;
+    width: $width;
+}
+  
+@mixin draw-progress($progress, $color) {
+    .pie {
+        .half-circle {
+            border-color: $color;
+        }
+  
+        .left-side {
+            transform: rotate($progress * 3.6deg);
+        }
+  
+        @if $progress <= 50 {
+            .right-side {
+                display: none;
+            }
+        } @else {
+            clip: rect(auto, auto, auto, auto);
+  
+            .right-side {
+            transform: rotate(180deg);
+            }   
+        }
+    }
+}
+  
+@mixin draw-progress--solid($progress, $color, $bg-color) {
+    background: linear-gradient(to right, $color 50%, $bg-color 50%);
+    
+    &:before {
+        @if $progress <= 50 {
+            background: $bg-color;
+            transform: rotate((100 - (50 - $progress)) / 100 * 360deg * -1);
+        } @else {
+            background: $color;
+            transform: rotate((100 - $progress) / 100 * 360deg);
+        }
+    }
 }
