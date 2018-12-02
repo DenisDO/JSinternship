@@ -10,6 +10,7 @@ body {
 
     margin: 0 auto;
     width: 979px;
+    // width: 100%;
     display: flex;
     align-items: flex-start;
 
@@ -27,6 +28,7 @@ body {
             div {
 
                 width: 244px;
+                // width: 40%;
                 height: 35px;
                 border-bottom: 1px solid $aside-nav-item-border-color;
 
@@ -48,6 +50,7 @@ body {
                         padding: 12px 15px;
                         box-sizing: border-box;
                         width: 244px;
+                        // width: 40%;
                         height: 40px;
                         color: $aside-nav-item-color;
                         background-color: $aside-nav-item--background;
@@ -183,6 +186,8 @@ body {
 
 
         article {
+
+            // width: 71%;
 
             .article__overwiev {
                 
