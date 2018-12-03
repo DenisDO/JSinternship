@@ -14,8 +14,10 @@
 
 
         h3 {
-            font-size: 17pt;
             color: $footer-title-color;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: -0.12px;
         }
     }
 
@@ -45,7 +47,7 @@
                 }
     
                 h5 {
-                    margin-bottom: 28px;
+                    margin-bottom: 24px;
                     font-size: 15px;
                     opacity: 0.3;
                 }

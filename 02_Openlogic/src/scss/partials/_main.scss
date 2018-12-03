@@ -148,17 +148,20 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        padding-top: 33px;
 
         header {
 
             display: flex;
             align-items: flex-start;
+            justify-content: space-between;
             border-bottom: 1px solid $border-bottom-color;
+            width: 100%;
 
             h1 {
-                font-size: 24px;
-                letter-spacing: -0.16px;
                 color: $section-title-color;
+                font-size: 24px;
+                font-weight: 400;
             }
 
             .article__date {
@@ -172,13 +175,14 @@ body {
                 background-image: url(../img/lines_texture.png);
 
                 .date--day {
-                    font-size: 16pt;
+                    font-size: 17px;
                     font-weight: bold;
                     color: $section-date-color;
+                    margin-bottom: 10px;
                 }
 
                 .date {
-                    font-size: 7pt;
+                    font-size: 10px;
                     color: $section-date-color;
                 }
             }
@@ -196,30 +200,35 @@ body {
                     font-size: 12pt;
                     line-height: 1.5;
                     font-style: italic;
-                    padding: 20px 0;
+                    padding: 21px 0;
                 }
                 border-bottom: 1px solid $border-bottom-color;
-                margin-bottom: 20px;
+                margin-bottom: 26px;
             }
 
             .article__part {
 
                 border-bottom: 1px solid $border-bottom-color;
-                margin-bottom: 20px;
+                margin-bottom: 26px;
 
                 h3 {
                     color: $article-part-title;
-                    font-size: 12pt;
-                    margin-bottom: 20px;
+                    margin-bottom: 37px;
+                    font-size: 15px;
+                    font-weight: 400;
+                    letter-spacing: -0.1px;
                 }
 
                 p {
-                    line-height: 1.5;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 19px;
                 }
 
                 .article__photo {
 
                     margin: 20px auto;
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
@@ -243,7 +252,7 @@ body {
 
                     img {
                         float: left;
-                        margin: 30px 30px 30px 0;
+                        margin: 27px 30px 30px 0;
                         border-bottom: 7px solid $header-banner-line-color;
                     }
                 }
@@ -258,7 +267,7 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 20px;
+            padding-bottom: 24px;
 
             a {
 

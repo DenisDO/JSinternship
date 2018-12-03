@@ -1,7 +1,7 @@
 .header {
 
     margin-bottom: 40px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto;
     width: 979px;
     // width: 100%;
 
@@ -23,6 +23,7 @@
 
                 display: flex;
                 justify-content: space-around;
+                margin-right: 20px;
 
                 li {
 
@@ -48,8 +49,8 @@
                     .nav--second {
 
                         position: absolute;
-                        top: 20px;
-                        right: -55px;
+                        top: 19px;
+                        right: -76px;
                         display: flex;
                         flex-direction: column;
                         justify-content: flex-start;
@@ -61,8 +62,8 @@
                             content: "🢑";
                             display: block;
                             position: absolute;
-                            top: -32px;
-                            left: 68px;
+                            top: -33px;
+                            left: 80px;
                         }
 
                         &::after {
@@ -86,7 +87,7 @@
                                 background-color: $header-link-second-background;
                                 font-size: 12px;
                                 padding: 9px 0;
-                                width: 140px;
+                                width: 145px;
 
                                 display: block;
                                 border-bottom: 1px solid $mineShaft;
@@ -109,7 +110,7 @@
                             ul {
 
                                 position: absolute;
-                                left: 143px;
+                                left: 149px;
                                 top: 0;
                                 display: flex;
                                 flex-direction: column;
@@ -147,18 +148,24 @@
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
-            padding: 18px;
+            padding: 23px 33px;
             box-sizing: border-box;
 
             h3 {
-                font-size: 17pt;
                 color: $header-banner-title-color;
-                margin-right: 80px;
+                // width: 371px;
+                width: 32%;
+                font-size: 24px;
+                font-weight: 400;
+                letter-spacing: -0.16px;
             }
     
             p {
                 color: $header-banner-article-color;
-                line-height: 1.5;
+                font-size: 12px;
+                font-weight: 400;
+                width: 65%;
+                line-height: 19px;
             }
         }
     }
