@@ -2,7 +2,8 @@
 
     margin-bottom: 40px;
     margin: 0 auto;
-    width: 979px;
+    max-width: 979px;
+    min-width: 790px;
     // width: 100%;
 
     .header__nav {

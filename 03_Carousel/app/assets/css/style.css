@@ -509,7 +509,7 @@ main {
     transform: scale(1) translateX(200px);
     z-index: 2; }
   28% {
-    transform: scale(0.75) translateX(500px);
+    transform: scale(0.75) translateX(700px);
     z-index: 2; }
   42% {
     transform: scale(0.5) translateX(1200px);

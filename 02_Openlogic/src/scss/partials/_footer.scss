@@ -7,7 +7,8 @@
         border-top: 1px solid $border-bottom-color;
         margin: 0 auto;
         height: 93px;
-        width: 979px;
+        max-width: 979px;
+        min-width: 790px;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -31,7 +32,8 @@
 
         .footer__items {
 
-            width: 979px;
+            max-width: 979px;
+            min-width: 790px;
             height: 174px;
             display: flex;
             align-items: flex-start;
