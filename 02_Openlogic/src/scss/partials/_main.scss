@@ -17,6 +17,8 @@ body {
 
     aside {
 
+        padding-top: 48px;
+
         nav {
 
             margin-right: 37px;
@@ -74,13 +76,14 @@ body {
                         position: relative;
 
                         &::after {
-                            color: $aside-nav-item-active-background;
-                            font-size: 20pt;
-                            content: "🢒";
+                            width: 3px;
+                            height: 8px;
+                            background-image: url(../img/arrow_rigth_red.png);
+                            content: "";
                             display: block;
                             position: absolute;
-                            top: 11%;
-                            right: -8px;
+                            top: 15px;
+                            right: -3px;
                         }
 
                         &:hover {
@@ -100,12 +103,13 @@ body {
                         position: relative;
 
                         &::before {
-                            color: $aside-nav-arrow-color;
-                            font-size: 25pt;
-                            content: "🢒";
+                            content: "";
                             display: block;
                             position: absolute;
-                            top: 1%;
+                            width: 4px;
+                            height: 7px;
+                            background-image: url(../img/arrow_right_nav.png);
+                            top: 15px;
                             left: 30px;
                         }
                     }
@@ -115,12 +119,13 @@ body {
                         position: relative;
 
                         &::after {
-                            color: $aside-nav-arrow-color;
-                            font-size: 25pt;
-                            content: "🢒";
+                            content: "";
                             display: block;
                             position: absolute;
-                            top: 1%;
+                            width: 4px;
+                            height: 7px;
+                            background-image: url(../img/arrow_right_nav.png);
+                            top: 15px;
                             right: 15px;
                         }
                     }
@@ -129,12 +134,13 @@ body {
                         position: relative;
 
                         &::after {
-                            color: $aside-nav-arrow-color;
-                            font-size: 25pt;
-                            content: "🢓";
+                            content: "";
                             display: block;
                             position: absolute;
-                            top: 34%;
+                            width: 7px;
+                            height: 4px;
+                            background-image: url(../img/arrow_down_nav.png);
+                            top: 15px;
                             right: 15px;
                         }
                     }
