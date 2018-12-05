@@ -12,6 +12,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &:hover .card {
+        animation-play-state: paused;
+    }
     
     .card {
         height: 300px;
