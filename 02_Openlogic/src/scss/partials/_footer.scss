@@ -20,6 +20,30 @@
             font-weight: 400;
             letter-spacing: -0.12px;
         }
+
+        ul {
+            
+            li {
+
+                display: inline-block;
+
+                a {
+
+                    cursor: pointer;
+
+                    img {
+
+                        margin: 0 38px;
+                        filter: grayscale(0.60);
+                        transition: 300ms;
+
+                        &:hover {
+                            filter: grayscale(0);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .footer__container {

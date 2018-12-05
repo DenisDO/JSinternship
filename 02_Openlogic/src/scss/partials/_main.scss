@@ -12,16 +12,78 @@ body {
     max-width: 979px;
     min-width: 790px;
     // width: 100%;
-    display: flex;
-    align-items: flex-start;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    // flex-wrap: wrap;
+
+    .banner {
+
+        background-color: $header-banner-background;
+        border-top: 7px solid $header-banner-line-color;
+        display: flex;
+        align-items: flex-start;
+        height: 128px;
+
+        img {
+
+        }
+
+        article {
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 23px 33px;
+            box-sizing: border-box;
+            position: relative;
+
+            h3 {
+                color: $header-banner-title-color;
+                // width: 371px;
+                width: 32%;
+                font-size: 24px;
+                font-weight: 400;
+                letter-spacing: -0.16px;
+            }
+    
+            p {
+                color: $header-banner-article-color;
+                font-size: 12px;
+                font-weight: 400;
+                width: 65%;
+                line-height: 19px;
+            }
+
+            ul {
+
+                position: absolute;
+                right: 25px;
+                bottom: 10px;
+
+                li {
+
+                    display: inline-block;
+
+                    a {
+
+                        img {
+                            margin: 0 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     aside {
 
         padding-top: 48px;
+        float: left;
 
         nav {
 
-            margin-right: 37px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -158,6 +220,7 @@ body {
         padding-top: 33px;
         min-width: 508px;
         max-width: 697px;
+        padding-left: 37px;
 
         header {
 
@@ -217,12 +280,22 @@ body {
 
             .article__part {
 
+                &--second {
+                    padding-bottom: 0px;
+                    margin-bottom: 24px;
+                }
+
                 border-bottom: 1px solid $border-bottom-color;
                 margin-bottom: 26px;
+                padding-bottom: 7px;
+                
+                .first_paragraph {
+                    margin-bottom: 36px;
+                }
 
                 h3 {
                     color: $article-part-title;
-                    margin-bottom: 37px;
+                    margin-bottom: 22px;
                     font-size: 15px;
                     font-weight: 400;
                     letter-spacing: -0.1px;
@@ -236,7 +309,7 @@ body {
 
                 .article__photo {
 
-                    margin: 20px auto;
+                    margin: 20px auto 14px auto;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
@@ -257,11 +330,11 @@ body {
 
                 p {
 
-                    margin-bottom: 20px;
+                    margin-bottom: 23px;
 
                     img {
                         float: left;
-                        margin: 27px 30px 30px 0;
+                        margin: 14px 30px 30px 0;
                         border-bottom: 7px solid $header-banner-line-color;
                     }
                 }
