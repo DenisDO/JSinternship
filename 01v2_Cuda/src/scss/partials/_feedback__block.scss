@@ -1,0 +1,173 @@
+.block--feedback {
+
+    background-color: $feedback-background-color;
+    color: $feedback-font-color;
+
+    .container--feedback {
+
+        header {
+
+            margin-bottom: 47px;
+
+            .title--feedback {
+                &::after {
+                    background-color: $feedback-decoLine-color;
+                }
+            }
+    
+            .description--feedback {
+    
+            }
+        }
+
+       section {
+            form {
+                margin: 0 auto;
+                width: 860px;
+                
+
+                input {
+                    box-sizing: border-box;
+                    outline: none;
+                    background-color: $feedback-form-background-color;
+                    border: none;
+                    border-radius: 5px;
+                    width: 415px;
+                    height: 56px;
+                    padding-left: 20px;
+                    margin-bottom: 27px;
+                    
+                    &:first-child {
+                        margin-right: 26px;
+                    }
+
+                    &::placeholder {
+                        color: $white;
+                        font-size: 18px;
+                    }
+                }
+
+                textarea {
+                    box-sizing: border-box;
+                    width: 860px;
+                    height: 200px;
+                    outline: none;
+                    background-color: $feedback-form-background-color;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 20px;
+                    margin-bottom: 57px;
+                    &::placeholder {
+                        color: $white;
+                        font-size: 18px;
+                    }
+                }
+
+                .button--feedback {
+                    background-color: $feedback-button-background-color;
+                    box-shadow: 0 4px 0 0 $feedback-button-after-color;
+                }
+            }
+       }
+    }
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .block--feedback {
+        .container--feedback {
+            header {
+                margin-bottom: 30px;
+            }
+    
+            section {
+                form {
+                    margin: 0 auto;
+                    width: 650px;
+                    
+    
+                    input {
+                        width: 100%;
+                        margin-bottom: 15px;
+
+                        &:first-child {
+                            margin-right: 0;
+                        }
+                    }
+    
+                    textarea {
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                }
+           }
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .block--feedback {
+        .container--feedback {
+            header {
+                margin-bottom: 30px;
+            }
+    
+            section {
+                form {
+                    margin: 0 auto;
+                    width: 400px;
+                    
+    
+                    input {
+                        width: 100%;
+                        margin-bottom: 15px;
+
+                        &:first-child {
+                            margin-right: 0;
+                        }
+                    }
+    
+                    textarea {
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                }
+           }
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .block--feedback {
+        .container--feedback {
+            header {
+                margin-bottom: 30px;
+            }
+    
+            section {
+                form {
+                    margin: 0 auto;
+                    max-width: 250px;
+                    
+    
+                    input {
+                        width: 100%;
+                        margin-bottom: 15px;
+
+                        &:first-child {
+                            margin-right: 0;
+                        }
+                    }
+    
+                    textarea {
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                }
+           }
+        }
+        
+    }
+}

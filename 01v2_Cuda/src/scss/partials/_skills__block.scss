@@ -1,0 +1,254 @@
+.block--skills {
+
+    background-color: $skills-background-color;
+    color: $skills-font-color;
+
+    .container--skills {
+
+        header {
+            margin-bottom: 66px;
+        }
+
+        .title--skills {
+            
+            &::after {
+                background-color: $skills-decoLine-color;
+            }
+        }
+
+        .description--skills {
+            
+        }
+
+        .skills__item {
+            display: inline-block;
+            padding: 0 40px;
+
+            *,
+            *:before,
+            *:after {
+                box-sizing: border-box;
+            }
+
+            h4 {
+
+            }
+        }
+        
+    }
+}
+
+    //PROGRESS__________________________START    
+
+    @mixin size($width, $height) {
+        height: $height;
+        width: $width;
+    }
+      
+    @mixin draw-progress($progress, $color) {
+        .pie {
+            .half-circle {
+                border-color: $color;
+            }
+      
+            .left-side {
+                transform: rotate($progress * 3.6deg);
+            }
+      
+            @if $progress <= 50 {
+                .right-side {
+                    display: none;
+                }
+            } @else {
+                clip: rect(auto, auto, auto, auto);
+      
+                .right-side {
+                transform: rotate(180deg);
+                }   
+            }
+        }
+    }
+      
+    @mixin draw-progress--solid($progress, $color, $bg-color) {
+        background: linear-gradient(to right, $color 50%, $bg-color 50%);
+        
+        &:before {
+            @if $progress <= 50 {
+                background: $bg-color;
+                transform: rotate((100 - (50 - $progress)) / 100 * 360deg * -1);
+            } @else {
+                background: $color;
+                transform: rotate((100 - $progress) / 100 * 360deg);
+            }
+        }
+    }
+    
+    .pie-wrapper {
+        @include size($default-size, $default-size);
+        float: left;
+        margin: 15px;
+        margin-bottom: 31px;
+        position: relative;
+        
+        &:nth-child(3n + 1) {
+          clear: both;
+        }
+      
+        .pie {
+          @include size(100%, 100%);
+          clip: rect(0, $default-size, $default-size, $default-size / 2);
+          left: 0;
+          position: absolute;
+          top: 0;
+      
+          .half-circle {
+            @include size(100%, 100%);
+            border: ($default-size / 10) solid #3498db;
+            border-radius: 50%;
+            clip: rect(0, $default-size / 2, $default-size, 0);
+            left: 0;
+            position: absolute;
+            top: 0;
+          }
+        }
+      
+        .label {
+          background: $skills-font-color;
+          border-radius: 50%;
+          bottom: $label-font-size-redo / 10;
+          color: #ecf0f1;
+          cursor: default;
+          display: block;
+          font-size: $label-font-size;
+          left: $label-font-size-redo / 10;
+          line-height: $label-font-size-redo * .70;
+          position: absolute;
+          top: 61px;
+          text-align: center;
+          left: 47px;
+      
+          .smaller {
+            color: #bdc3c7;
+            font-size: .45em;
+            padding-bottom: 20px;
+            vertical-align: super;
+          }
+        }
+      
+        .shadow {
+          @include size(100%, 100%);
+          border: $default-size / 10 solid $mystic;
+          border-radius: 50%;
+        }
+      
+        
+          .label {
+            background: none;
+            color: $skills-font-color;
+            font-size: 50px;
+      
+            .smaller {
+              color: $skills-font-color;
+            }
+          }
+        
+      
+        &.progress-85 {
+          @include draw-progress(85, #eb7d4b);
+        }
+      
+      
+        &.progress-90 {
+          @include draw-progress(90, #30bae7);
+        }
+      
+        &.progress-75 {
+          @include draw-progress(75, #d74680);
+        }
+      
+        &.progress-70 {
+          @include draw-progress(70, #15c7a8);
+        }
+      }
+        
+        .label {
+          background: transparent;
+        }
+  
+  //PROGRESS__________________________END
+
+@media only screen and (max-width: 1110px) {
+    .block--skills {
+        .container--skills {
+    
+            header {
+                margin-bottom: 50px;
+            }
+    
+            .skills__item {
+                padding: 0 110px;
+                &:nth-child(1), &:nth-child(2) {
+                    margin-bottom: 40px;
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .block--skills {
+        .container--skills {
+    
+            header {
+                margin-bottom: 50px;
+            }
+    
+            .skills__item {
+                padding: 0 70px;
+                &:nth-child(1), &:nth-child(2) {
+                    margin-bottom: 40px;
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .block--skills {
+        .container--skills {
+    
+            header {
+                margin-bottom: 50px;
+            }
+    
+            .skills__item {
+                padding: 0 20px;
+                &:nth-child(1), &:nth-child(2) {
+                    margin-bottom: 40px;
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .block--skills {
+        .container--skills {
+    
+            header {
+                margin-bottom: 50px;
+            }
+    
+            .skills__item {
+                padding: 0 20px;
+                &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                    margin-bottom: 50px;
+                }
+            }
+            
+        }
+    }
+}
