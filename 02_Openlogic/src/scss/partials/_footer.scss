@@ -2,50 +2,6 @@
 
     width: 100%;
 
-    .clients__block {
-
-        border-top: 1px solid $border-bottom-color;
-        margin: 0 auto;
-        height: 93px;
-        max-width: 979px;
-        min-width: 790px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-
-        h3 {
-            color: $footer-title-color;
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: -0.12px;
-        }
-
-        ul {
-            
-            li {
-
-                display: inline-block;
-
-                a {
-
-                    cursor: pointer;
-
-                    img {
-
-                        margin: 0 38px;
-                        filter: grayscale(0.60);
-                        transition: 300ms;
-
-                        &:hover {
-                            filter: grayscale(0);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     .footer__container {
 
         background-color: $footer-background;

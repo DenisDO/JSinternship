@@ -110,18 +110,18 @@ body {
 
                 li {
 
+                    background-color: $aside-nav-item--background;
+                    border-bottom: 1px solid $aside-nav-item-border-color;
+
                     a {
                         display: block;
                         padding: 12px 15px;
                         box-sizing: border-box;
                         width: 244px;
-                        // width: 40%;
                         height: 40px;
-                        color: $aside-nav-item-color;
-                        background-color: $aside-nav-item--background;
-                        border-bottom: 1px solid $aside-nav-item-border-color;
                         text-decoration: none;
                         font-size: 10pt;
+                        color: $aside-nav-item-color;
 
                         &:hover {
                             color: $aside-nav-item-active-color;
@@ -213,6 +213,7 @@ body {
 
     section {
 
+        float: right;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -282,12 +283,11 @@ body {
 
                 &--second {
                     padding-bottom: 0px;
-                    margin-bottom: 24px;
+                    padding-top: 25px;
                 }
 
                 border-bottom: 1px solid $border-bottom-color;
-                margin-bottom: 26px;
-                padding-bottom: 7px;
+                padding-bottom: 9px;
                 
                 .first_paragraph {
                     margin-bottom: 36px;
@@ -350,6 +350,7 @@ body {
             justify-content: space-between;
             align-items: center;
             padding-bottom: 24px;
+            padding-top: 23px;
 
             a {
 
@@ -370,6 +371,50 @@ body {
                 span {
                     font-size: 12pt;
                     color: $article-footer-link-color;
+                }
+            }
+        }
+    }
+
+    .clients__block {
+
+        border-top: 1px solid $border-bottom-color;
+        margin: 0 auto;
+        height: 93px;
+        max-width: 979px;
+        min-width: 790px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+        h3 {
+            color: $footer-title-color;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: -0.12px;
+        }
+
+        ul {
+            
+            li {
+
+                display: inline-block;
+
+                a {
+
+                    cursor: pointer;
+
+                    img {
+
+                        margin: 0 38px;
+                        filter: grayscale(0.60);
+                        transition: 300ms;
+
+                        &:hover {
+                            filter: grayscale(0);
+                        }
+                    }
                 }
             }
         }
