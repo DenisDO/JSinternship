@@ -412,10 +412,8 @@ main {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center; }
-  main:hover .card {
-    animation-play-state: paused; }
+  -ms-flex-align: end;
+      align-items: flex-end; }
   main .card {
     height: 300px;
     width: 150px;
@@ -427,133 +425,67 @@ main {
 
 @keyframes anim1 {
   0% {
-    transform: scale(0.5) translateX(0px);
-    z-index: 2; }
-  14% {
-    transform: scale(0.75) translateX(200px);
-    z-index: 2; }
+    transform: scale(0.5) translateX(0px); }
   28% {
-    transform: scale(1) translateX(400px);
-    z-index: 2; }
-  42% {
-    transform: scale(1) translateX(600px);
-    z-index: 2; }
+    transform: scale(1) translateX(400px); }
   56% {
-    transform: scale(1) translateX(800px);
-    z-index: 2; }
-  70% {
-    transform: scale(0.75) translateX(1750px);
-    z-index: 2; }
+    transform: scale(1) translateX(800px); }
   84% {
-    transform: scale(0.5) translateX(2400px);
-    z-index: 1; }
+    transform: scale(0.5) translateX(2300px); }
   100% {
-    transform: scale(0.5) translateX(0px);
-    z-index: 1; } }
+    transform: scale(0.5) translateX(0px); } }
 
 @keyframes anim2 {
   0% {
-    transform: scale(0.75) translateX(0px);
-    z-index: 2; }
-  14% {
-    transform: scale(1) translateX(200px);
-    z-index: 2; }
-  28% {
-    transform: scale(1) translateX(400px);
-    z-index: 2; }
-  42% {
-    transform: scale(1) translateX(600px);
-    z-index: 2; }
-  56% {
-    transform: scale(0.75) translateX(1400px);
-    z-index: 2; }
-  70% {
-    transform: scale(0.5) translateX(2000px);
-    z-index: 1; }
-  84% {
-    transform: scale(0.5) translateX(-400px);
-    z-index: 1; }
+    transform: scale(0.75) translateX(0px); }
+  20% {
+    transform: scale(1) translateX(200px); }
+  40% {
+    transform: scale(1) translateX(600px); }
+  60% {
+    transform: scale(0.5) translateX(1940px); }
+  80% {
+    transform: scale(0.5) translateX(-400px); }
   100% {
-    transform: scale(0.75) translateX(0px);
-    z-index: 1; } }
+    transform: scale(0.75) translateX(0px); } }
 
 @keyframes anim3 {
   0% {
-    transform: scale(1) translateX(0px);
-    z-index: 2; }
-  14% {
-    transform: scale(1) translateX(200px);
-    z-index: 2; }
-  28% {
-    transform: scale(1) translateX(400px);
-    z-index: 2; }
-  42% {
-    transform: scale(0.75) translateX(1050px);
-    z-index: 2; }
-  56% {
-    transform: scale(0.5) translateX(1600px);
-    z-index: 1; }
-  70% {
-    transform: scale(0.5) translateX(-800px);
-    z-index: 1; }
-  84% {
-    transform: scale(0.75) translateX(-250px);
-    z-index: 1; }
+    transform: scale(1) translateX(0px); }
+  25% {
+    transform: scale(1) translateX(400px); }
+  50% {
+    transform: scale(0.5) translateX(1560px); }
+  75% {
+    transform: scale(0.5) translateX(-800px); }
   100% {
-    transform: scale(1) translateX(0px);
-    z-index: 1; } }
+    transform: scale(1) translateX(0px); } }
 
 @keyframes anim4 {
   0% {
-    transform: scale(1) translateX(0px);
-    z-index: 2; }
-  14% {
-    transform: scale(1) translateX(200px);
-    z-index: 2; }
-  28% {
-    transform: scale(0.75) translateX(700px);
-    z-index: 2; }
-  42% {
-    transform: scale(0.5) translateX(1200px);
-    z-index: 1; }
-  56% {
-    transform: scale(0.5) translateX(-1200px);
-    z-index: 1; }
-  70% {
-    transform: scale(0.75) translateX(-600px);
-    z-index: 1; }
-  84% {
-    transform: scale(1) translateX(-200px);
-    z-index: 1; }
+    transform: scale(1) translateX(0px); }
+  20% {
+    transform: scale(1) translateX(200px); }
+  40% {
+    transform: scale(0.5) translateX(1200px); }
+  60% {
+    transform: scale(0.5) translateX(-1200px); }
+  80% {
+    transform: scale(1) translateX(-200px); }
   100% {
-    transform: scale(1) translateX(0px);
-    z-index: 1; } }
+    transform: scale(1) translateX(0px); } }
 
 @keyframes anim5 {
   0% {
-    transform: scale(1) translateX(0px);
-    z-index: 2; }
-  14% {
-    transform: scale(0.75) translateX(250px);
-    z-index: 2; }
-  28% {
-    transform: scale(0.5) translateX(800px);
-    z-index: 1; }
-  42% {
-    transform: scale(0.5) translateX(-1600px);
-    z-index: 1; }
-  56% {
-    transform: scale(0.75) translateX(-850px);
-    z-index: 1; }
-  70% {
-    transform: scale(1) translateX(-400px);
-    z-index: 1; }
-  84% {
-    transform: scale(1) translateX(-200px);
-    z-index: 1; }
+    transform: scale(1) translateX(0px); }
+  25% {
+    transform: scale(0.5) translateX(800px); }
+  50% {
+    transform: scale(0.5) translateX(-1600px); }
+  75% {
+    transform: scale(1) translateX(-400px); }
   100% {
-    transform: scale(1) translateX(0px);
-    z-index: 1; } }
+    transform: scale(1) translateX(0px); } }
 
 @keyframes anim6 {
   0% {
@@ -609,28 +541,20 @@ main {
 
 body main .animated--first {
   background-color: #fc5c65;
-  animation: anim1 12s infinite 0s linear; }
+  animation: anim1 7s infinite 0s linear; }
 
 body main .animated--second {
   background-color: #fd9644;
-  animation: anim2 12s infinite 0s linear; }
+  animation: anim2 7s infinite 0s linear; }
 
 body main .animated--third {
   background-color: #fed330;
-  animation: anim3 12s infinite 0s linear; }
+  animation: anim3 7s infinite 0s linear; }
 
 body main .animated--fourth {
   background-color: #2bcbba;
-  animation: anim4 12s infinite 0s linear; }
+  animation: anim4 7s infinite 0s linear; }
 
 body main .animated--fifth {
   background-color: #3867d6;
-  animation: anim5 12s infinite 0s linear; }
-
-body main .animated--sixth {
-  background-color: #8854d0;
-  animation: anim6 12s infinite 0s linear; }
-
-body main .animated--seventh {
-  background-color: #45aaf2;
-  animation: anim7 12s infinite 0s linear; }
+  animation: anim5 7s infinite 0s linear; }
