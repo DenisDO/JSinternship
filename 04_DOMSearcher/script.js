@@ -3,9 +3,12 @@ let currentElement;
 let otherElements = {};
 
 function addStyles() {
-    let head = document.querySelector('body');
+    let head = document.querySelector('head');
     let style = document.createElement('style');
     style.innerHTML = `
+    body {
+        position: relative;
+    }
     .window__container {
         z-index: 1000;
         height: 150px;
@@ -19,7 +22,7 @@ function addStyles() {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        position: fixed;
+        position: absolute;
         top: 50px;
         left: 50px;
         opacity: 0.8; }
@@ -254,6 +257,7 @@ function addEvents(event) {
         case 'children':
           showNewElement(otherElements, 'children');
           break;
+    }
 }
 
 function showNewElement(otherElements, key) {
@@ -268,6 +272,8 @@ function initDragAndDrop() {
     let windowContainer = document.getElementById('windowContainer');
 
     windowContainer.onmousedown = function(e) {
+
+        // windowContainer.style.position = 'absolute';
 
         let coords = getCoords(windowContainer);
         let shiftX = e.pageX - coords.left;
@@ -295,7 +301,7 @@ function initDragAndDrop() {
         return false;
     };
 
-    function getCoords(elem) {   // кроме IE8-
+    function getCoords(elem) {
         let box = elem.getBoundingClientRect();
         return {
             top: box.top + pageYOffset,
@@ -306,4 +312,4 @@ function initDragAndDrop() {
 
 window.addEventListener('load', addStyles);
 window.addEventListener('load', createWindow);
-// window.addEventListener('load', initDragAndDrop);
+window.addEventListener('load', initDragAndDrop);
