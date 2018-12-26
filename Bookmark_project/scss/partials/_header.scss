@@ -1,0 +1,132 @@
+.header {
+    width: 100%;
+    background-color: $header-background-color;
+    padding: 57px 0;
+    box-sizing: border-box;
+
+    .header__container {
+
+        max-width: 1100px;
+        margin: 0 auto;
+
+        .header__logo {
+            float: left;
+            padding-left: 50px;
+        }
+    
+        nav {
+
+            line-height: 38px;
+            float: right;
+
+            .header__nav {
+
+                li {
+                    display: inline-block;
+    
+                    a {
+    
+                        color: $header-font-color;
+                        text-decoration: none;
+                        padding: 4px 20px;
+                        border-radius: 5px;
+                        font-family: "Titillium Web";
+                        font-size: 16px;
+    
+                        &:hover {
+                            background-color: $link-hover-background-color;
+                        }
+                    }
+                    
+                    .header__link--active {
+                        background-color: $link-hover-background-color;
+                    }
+                }
+            }
+
+            .hamburger {
+                display: none;
+                width: 50px;
+                height: 31px;
+                position: relative;
+                cursor: pointer;
+
+                span {
+                    display: block;
+                    position: absolute;
+                    height: 7px;
+                    width: 100%;
+                    background: $white;
+                    border-radius: 15px;
+
+                    &:nth-child(1) {
+                        top: 0px;
+                    }
+                      
+                    &:nth-child(2) {
+                        top: 12px;
+                    }
+                      
+                    &:nth-child(3) {
+                        top: 24px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+
+    .header {
+        .header__container {
+            max-width: 900px;
+        }
+
+        nav {
+            padding-right: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .header {
+        .header__container {
+            max-width: 700px;
+
+            nav {
+                padding-right: 50px;
+    
+                .header__nav {
+                    display: none;
+                }
+    
+                .hamburger {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .header {
+        padding: 25px 0;
+        .header__container {
+            max-width: 500px;
+
+            nav {
+                padding-right: 50px;
+    
+                .header__nav {
+                    display: none;
+                }
+    
+                .hamburger {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -310,6 +310,6 @@ function initDragAndDrop() {
     }
 }
 
-addStyles();
-createWindow();
-initDragAndDrop();
+window.addEventListener('load', addStyles);
+window.addEventListener('load', createWindow);
+window.addEventListener('load', initDragAndDrop);

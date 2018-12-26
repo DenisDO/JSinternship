@@ -1,0 +1,176 @@
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    font-family: "Titillium Web";
+    font-size: 18px;
+    color: $white;
+    width: 297px;
+    height: 66px;
+    position: relative;
+    border-radius: 5px;
+    bottom: 0;
+    transition: 300ms;
+    border: none;
+    outline: none;
+}
+
+.block {
+    font-family: "Titillium Web";
+    width: 100%;
+    text-align: center;
+    padding: 121px 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.title {
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 32px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -14px;
+        right: 45%;
+        width: 87px;
+        height: 4px;
+    }
+}
+
+.description {
+    max-width: 645px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.36px;
+}
+
+.item__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+}
+
+@media only screen and (max-width: 1110px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .block {
+        padding: 100px 0;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+    
+    .description {
+        max-width: 500px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .block {
+        padding: 70px 0;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+    
+    .description {
+        max-width: 400px;
+        font-size: 14px;
+    }
+
+    .item__title {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        max-width: 500px;
+    }
+
+    .block {
+        padding: 50px 0;
+    }
+
+    .title {
+        font-size: 30px;
+        width: 400px;
+        margin: 0 auto 30px auto;
+        
+        &::after {
+            right: 40%;
+        }
+    }
+    
+    .description {
+        max-width: 450px;
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 14px;
+        width: 250px;
+        height: 60px;
+    }
+
+    .item__title {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        max-width: 300px;
+    }
+
+    .block {
+        padding: 20px 0;
+    }
+
+    .title {
+        font-size: 25px;
+        max-width: 300px;
+        margin: 0 auto 20px auto;
+        
+        &::after {
+            right: 40%;
+        }
+    }
+    
+    .description {
+        max-width: 290px;
+        font-size: 15px;
+    }
+
+    .button {
+        font-size: 14px;
+        max-width: 200px;
+        height: 40px;
+    }
+
+    .item__title {
+        font-size: 16px;
+    }
+}

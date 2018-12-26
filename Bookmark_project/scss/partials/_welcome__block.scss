@@ -1,0 +1,55 @@
+.block--welcome {
+
+    background-color: $header-background-color;
+    color: $white;
+    padding: 75px 0 136px 0;
+
+    .container--welcome {
+
+        h3 {
+            font-family: "Titillium Web";
+            font-size: 42px;
+            line-height: 48px;
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+
+        .button--welcome {
+            background-color: $welcome-button-background-color;
+            box-shadow: 0 4px 0 0 $welcome-button-after-color;
+
+            &:hover {
+                box-shadow: none;
+                bottom: -4px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+    .block--welcome {
+        padding: 35px 0 92px 0;
+    
+        .container--welcome {
+    
+            h3 {
+                font-size: 35px;
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .block--welcome {
+        padding: 20px 0 40px 0;
+    
+        .container--welcome {
+    
+            h3 {
+                font-size: 25px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

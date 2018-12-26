@@ -1,0 +1,33 @@
+//----------------------------------*\
+// CONFIG MODULES
+//----------------------------------*/
+
+// Config modules
+@import 'modules/_vars.scss';
+@import 'modules/_color_matrix.scss';
+@import 'modules/_normalize.scss';
+@import 'modules/_reset.scss';
+
+//----------------------------------*\
+// OBJECTS & MODULES
+//----------------------------------*/
+
+@import 'modules/_typography.scss';
+
+
+//----------------------------------*\
+// PARTIALS
+//----------------------------------*/
+
+@import 'partials/_global.scss';
+
+@import 'partials/_header.scss';
+@import 'partials/_welcome__block.scss';
+@import 'partials/_services__block.scss';
+@import 'partials/_team__block.scss';
+@import 'partials/_skills__block.scss';
+@import 'partials/_portfolio__block.scss';
+@import 'partials/_reviews__block.scss';
+@import 'partials/_feedback__block.scss';
+@import 'partials/_footer.scss';
+@import 'partials/_window.scss';

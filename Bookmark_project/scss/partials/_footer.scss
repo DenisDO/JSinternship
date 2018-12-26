@@ -1,0 +1,90 @@
+footer {
+    height: 113px;
+    border-top: 1px solid $feedback-border-top-color;
+    background-color: $feedback-background-color;
+    text-align: center;
+    font-family: "Titillium Web";
+    box-sizing: border-box;
+    padding: 44px 0;
+
+    ul {
+        li {
+            display: inline-block;
+
+            a {
+                font-size: 24px;
+                color: $feedback-link-color;
+                text-decoration: none;
+                margin: 0 25px;
+
+                &:hover {
+                    color: $feedback-link-actice-color;
+                }
+            }
+
+            .footer__nav--active {
+                color: $feedback-link-actice-color;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+    footer {
+        ul {
+            li {    
+                a {
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    footer {
+        height: 90px;
+        padding: 34px 0;
+    
+        ul {
+            li {
+                a {
+                    font-size: 20px;
+                    margin: 0 8px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    footer {
+        height: 150px;
+        padding: 34px 0;
+    
+        ul {
+            li {
+                margin: 10px 8px;
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    footer {
+        height: 220px;
+        padding: 34px 0;
+    
+        ul {
+            li {
+                margin: 10px 8px;
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
