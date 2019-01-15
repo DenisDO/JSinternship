@@ -39,9 +39,11 @@ function runner(iterator) {
                 if (next.value instanceof Promise) {
                     next.value.then(
                         res => {
+                            result.push(res);
                             execute(iterator, res);
                         },
                         rej => {
+                            result.push(rej);
                             execute(iterator, rej);
                         }
                     );
