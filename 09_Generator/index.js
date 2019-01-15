@@ -1,33 +1,40 @@
-function sum(a, b) {
-  return a + b;
+function sum() {
+    console.log(1);
+    return [].reduce.call(arguments, (acc, el) => acc+=el);
 }
 
-let prom = new Promise((res, rej) => {
-  setTimeout(rej, 5000, 888);
-});
+const prom = x => new Promise(res => {
+    console.log(2);
+    setTimeout(res,2000,x);
+})
 
-let val = 555;
-let val2 = 777;
-
-function* gen() {
-    const b = yield prom;
-    const c = yield val;
-    const a = yield () => sum(333, 333);
-    const d = yield val2;
+function pow() {
+    console.log(3);
+    return [].reduce.call(arguments, (acc, el) => acc*=el);
 }
 
-let iterator = gen();
+const arr = [1,2,3,4]
 
+function *gen() {
+    const a = yield sum.bind(null, ...arr);
+    const b = yield prom(a);
+    const c = yield pow.bind(null, ...arr);
+    const d = yield arr;
+    console.log(a + b + c + d)
+    yield a + b + c + d;
+}
+  
+  
 function runner(iterator) {
-
+      
     const result = [];
 
     return new Promise(resolve => {
-
-        function execute(iterator, yieldValue) {
-
-            let next = iterator.next(yieldValue);
         
+        function execute(iterator, yieldValue) {
+            
+            let next = iterator.next(yieldValue);
+            
             if (!next.done) {
                 if (next.value instanceof Promise) {
                     next.value.then(
@@ -57,4 +64,4 @@ function runner(iterator) {
     })
 }
 
-runner(iterator).then(data => {console.log(data);});
+runner(gen()).then(data => console.log(data.pop() === '441,2,3,4' ? "Good Job" : "You are fail this task"))
