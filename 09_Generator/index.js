@@ -26,36 +26,35 @@ function *gen() {
   
   
 function runner(iterator) {
-      
     const result = [];
 
     return new Promise(resolve => {
-        
         function execute(iterator, yieldValue) {
-            
             const next = iterator.next(yieldValue);
+            const {done, value} = next;
+
+            if(done) {
+                return resolve(result);
+            }
             
-            if (!next.done) {
-                if (next.value instanceof Promise) {
-                    next.value.then(
-                        res => {
-                            result.push(res);
-                            execute(iterator, res);
-                        },
-                        rej => {
-                            result.push(rej);
-                            execute(iterator, rej);
-                        }
-                    );
-                } else if (typeof next.value === 'function') {
-                    result.push(next.value());
-                    execute(iterator,next.value());
-                } else {
-                    result.push(next.value);
-                    execute(iterator, next.value);
-                }
+            if (value instanceof Promise) {
+                value.then(
+                    res => {
+                        result.push(res);
+                        execute(iterator, res);
+                    },
+                    rej => {
+                        result.push(rej);
+                        execute(iterator, rej);
+                    }
+                );
+            } else if (typeof value === 'function') {
+                const cbResult = value()
+                result.push(cbResult);
+                execute(iterator, cbResult);
             } else {
-                resolve(result);
+                result.push(value);
+                execute(iterator, value);
             }
         }
         
