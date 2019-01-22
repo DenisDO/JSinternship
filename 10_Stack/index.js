@@ -9,13 +9,17 @@ class Stack {
     }
 
     push(item) {
+        if (typeof item === 'undefined') {
+            return;
+        }
+
         this.elements[this.elements.length] = item;
         this.setCount();
     }
 
     pop() {
         if (this.elements.length === 0) {
-            throw new Error('Stack is empty!');
+            return;
         }
 
         let element = this.elements[this.elements.length - 1];
@@ -26,7 +30,7 @@ class Stack {
 
     peek() {
         if (this.elements.length === 0) {
-            throw new Error('Stack is empty!');
+            return;
         }
 
         return this.elements[this.elements.length - 1];
@@ -38,10 +42,21 @@ class Stack {
     }
 
     clone() {
-        return this;
+        const stack = new Stack();
+
+        this.elements.forEach(value => {
+            stack.push(value);
+        });
+
+        stack.setCount();
+        return stack;
     }
 
     contains(item) {
+        if (item === undefined) {
+            throw Error('Method argument is not defined');
+        }
+
         for (let i = 0; i < this.elements.length; i++) {
             if (item === this.elements[i]) {
                 return true;
@@ -51,7 +66,7 @@ class Stack {
     }
 
     toArray() {
-        return this.elements;
+        return this.elements.map(value => value);
     }
 
     copyTo(array, index) {
@@ -63,10 +78,14 @@ class Stack {
             throw new Error('Index must be greater than 0!');
         }
 
-        for (let i = 0; i < this.elements.length; i++) {
+        for (let i = this.elements.length - 1; i >= 0; i--) {
             array[index] = this.elements[i];
             index++;
         }
+    }
+
+    isEmpty() {
+        return this.count === 0;
     }
 }
 
